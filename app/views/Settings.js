@@ -97,11 +97,13 @@ export const SettingsScreen = ({ navigation }) => {
       onBackPress={backToMain}>
       <ScrollView>
         <Section>
-          <Item
-            label={getLoggingText()}
-            icon={isLogging ? Icons.Checkmark : Icons.XmarkIcon}
-            onPress={locationToggleButtonPressed}
-          />
+          {isGPS && (
+            <Item
+              label={getLoggingText()}
+              icon={isLogging ? Icons.Checkmark : Icons.XmarkIcon}
+              onPress={locationToggleButtonPressed}
+            />
+          )}
           <NativePicker
             items={LOCALE_LIST}
             value={userLocale}
@@ -117,31 +119,31 @@ export const SettingsScreen = ({ navigation }) => {
           </NativePicker>
         </Section>
         <Section>
-          {isGPS ? (
-            <Item
-              label={t('label.choose_provider_title')}
-              description={t('label.choose_provider_subtitle')}
-              onPress={() => navigation.navigate('ChooseProviderScreen')}
-            />
-          ) : null}
+          <Item
+            label={t('label.choose_provider_title')}
+            description={t('label.choose_provider_subtitle')}
+            onPress={() => navigation.navigate('ChooseProviderScreen')}
+          />
           <Item
             label={t('label.news_title')}
             description={t('label.news_subtitle')}
             onPress={() => navigation.navigate('NewsScreen')}
-          />
-          <Item
-            label={t('label.event_history_title')}
-            description={t('label.event_history_subtitle')}
-            onPress={() => navigation.navigate('ExposureHistoryScreen')}
-            last={isGPS ? false : true}
+            last={!isGPS}
           />
           {isGPS ? (
-            <Item
-              label={t('share.title')}
-              description={t('share.subtitle')}
-              onPress={() => navigation.navigate('ExportScreen')}
-              last
-            />
+            <>
+              <Item
+                label={t('label.event_history_title')}
+                description={t('label.event_history_subtitle')}
+                onPress={() => navigation.navigate('ExposureHistoryScreen')}
+              />
+              <Item
+                label={t('share.title')}
+                description={t('share.subtitle')}
+                onPress={() => navigation.navigate('ExportScreen')}
+                last
+              />
+            </>
           ) : null}
         </Section>
 
