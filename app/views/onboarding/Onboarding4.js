@@ -33,7 +33,7 @@ const Onboarding = props => {
         translucent
       />
       <ImageBackground
-        source={Images.LaunchScreen1}
+        source={Images.LaunchScreen1BT}
         style={styles.backgroundImage}
       />
       <View style={styles.contentContainer}>
@@ -72,18 +72,16 @@ const styles = StyleSheet.create({
   contentContainer: {
     width: width * 0.9,
     flex: 1,
-    justifyContent: 'center',
     alignSelf: 'center',
+    marginTop: '30%',
   },
   headerText: {
     color: Colors.VIOLET,
-    width: width * 0.7,
   },
   subheaderText: {
     marginTop: '6%',
     color: Colors.VIOLET,
-    fontSize: 15,
-    width: width * 0.6,
+    fontSize: 16,
     fontFamily: fontFamily.primaryRegular,
   },
 });
