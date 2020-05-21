@@ -13,6 +13,7 @@ import { checkIntersect } from '../helpers/Intersect';
 import BackgroundTaskServices from '../services/BackgroundTaskService';
 import LocationServices, { Reason } from '../services/LocationService';
 import LocationTracking from './LocationTracking';
+import { ExposureNotificationNotAvailablePage } from './main/ExposureNotificationNotAvailablePage';
 import { ExposurePage } from './main/ExposurePage';
 import { NoKnownExposure } from './main/NoKnownExposure';
 import { OffPage } from './main/OffPage';
@@ -87,7 +88,11 @@ const Main = () => {
 
   let page;
 
-  if (location.canTrack) {
+  if (tracingStrategy === 'bte') {
+    // A BT specific page for when Exposure Notifications are not available
+    // for the Healthcare Authority chosen.
+    page = <ExposureNotificationNotAvailablePage />;
+  } else if (location.canTrack) {
     if (location.hasPotentialExposure) {
       page = <ExposurePage tracingStrategy={tracingStrategy} />;
     } else {

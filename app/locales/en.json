@@ -85,6 +85,8 @@
     "home_mayo_link_label": "from the Mayo Clinic",
     "home_no_contact_header": "No known contact",
     "home_no_contact_subtext": "Based on available data you haven’t been near anyone reported positive for COVID-19.",
+    "home_not_available_header_bluetooth": "Exposure history notifications are not yet available",
+    "home_not_available_subtext_bluetooth": "Your phone is not currently covered by Healthcare Authorities using PathCheck.",
     "home_setting_off_header": "Unknown",
     "home_setting_off_subtext_bluetooth": "We can’t tell if you’re at risk unless you enable contact tracing in the settings screen.",
     "home_setting_off_subtext_location": "We can’t tell if you’re at risk unless you enable location history in the settings screen.",
