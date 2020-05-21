@@ -48,7 +48,7 @@
     "about_title": "About",
     "authorities_add_button_label": "Add Healthcare Authority",
     "authorities_add_url": "Add authority via URL",
-    "authorities_desc": "Select on or more Healthcare Authorities in your area for information about COVID-19 near you, if available. \n\nEither select a name from the global registry or enter a web address provided by a Healthcare Authority that has implemented PathCheck.",
+    "authorities_desc": "Select one or more Healthcare Authorities in your area for information about COVID-19 near you, if available. \n\nEither select a name from the global registry or enter a web address provided by a Healthcare Authority that has implemented PathCheck.",
     "authorities_input_placeholder": "Paste your URL here",
     "authorities_new_in_area_msg": "Subscribe to {{count}} new trusted Healthcare Authority in your location",
     "authorities_new_in_area_msg_plural": "Subscribe to {{count}} new trusted Healthcare Authorities in your location",
