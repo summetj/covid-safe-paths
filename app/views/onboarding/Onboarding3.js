@@ -31,10 +31,10 @@ const Onboarding = props => {
       />
       <View style={styles.contentContainer}>
         <Typography style={styles.headerText} use={Type.Headline2}>
-          {languages.t('label.launch_screen3_header')}
+          {languages.t('label.launch_screen3_header_bluetooth')}
         </Typography>
         <Typography style={styles.subheaderText}>
-          {languages.t('label.launch_screen3_subheader')}
+          {languages.t('label.launch_screen3_subheader_bluetooth')}
         </Typography>
       </View>
       <View style={sharedStyles.footerContainer}>
