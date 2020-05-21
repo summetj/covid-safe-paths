@@ -7,11 +7,9 @@ import {
   Text,
   View,
 } from 'react-native';
-import { openSettings } from 'react-native-permissions';
 import { SvgXml } from 'react-native-svg';
 
 import { Icons, Images } from '../../assets';
-import { Button } from '../../components/Button';
 import { Typography } from '../../components/Typography';
 import { Theme } from '../../constants/themes';
 import { MayoButton } from './MayoButton';
