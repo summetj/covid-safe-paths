@@ -8,7 +8,7 @@ import { styles } from './style';
 
 const MAYO_COVID_URL = 'https://www.mayoclinic.org/coronavirus-covid-19';
 
-export const MayoButton = () => {
+export const MayoButton = (): JSX.Element => {
   const { t, i18n } = useTranslation();
   const onPress = () => Linking.openURL(MAYO_COVID_URL);
 

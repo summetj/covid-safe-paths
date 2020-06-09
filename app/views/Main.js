@@ -11,8 +11,8 @@ import { isGPS } from '../COVIDSafePathsConfig';
 import { checkIntersect } from '../helpers/Intersect';
 import BackgroundTaskServices from '../services/BackgroundTaskService';
 import LocationServices, { Reason } from '../services/LocationService';
-import { ExposureNotificationNotAvailablePage } from './main/ExposureNotificationNotAvailablePage';
 import { ExposurePage } from './main/ExposurePage';
+import ExposureNotificationMain from './ExposureNotification';
 import { NoKnownExposure } from './main/NoKnownExposure';
 import { OffPage } from './main/OffPage';
 import { styles } from './main/style';
@@ -82,34 +82,32 @@ export const Main = () => {
     };
   }, [navigation, updateStateInfo]);
 
-  let page;
-
-  if (!isGPS) {
-    // A BT specific page for when Exposure Notifications are not available
-    // for the Healthcare Authority chosen.
-    page = <ExposureNotificationNotAvailablePage />;
-  } else if (location.canTrack) {
-    if (location.hasPotentialExposure) {
-      page = <ExposurePage />;
+  if (isGPS) {
+    let page;
+    if (location.canTrack) {
+      if (location.hasPotentialExposure) {
+        page = <ExposurePage />;
+      } else {
+        page = <NoKnownExposure />;
+      }
     } else {
-      page = <NoKnownExposure />;
+      if (
+        location.reason === Reason.LOCATION_OFF ||
+        location.reason === Reason.NOT_AUTHORIZED
+      ) {
+        page = <OffPage />;
+      } else {
+        // Invariant violation if this occurs
+        page = <UnknownPage />;
+      }
     }
+    return (
+      <View style={styles.backgroundImage}>
+        {page}
+        <SettingsNavButton />
+      </View>
+    );
   } else {
-    if (
-      location.reason === Reason.LOCATION_OFF ||
-      location.reason === Reason.NOT_AUTHORIZED
-    ) {
-      page = <OffPage />;
-    } else {
-      // Invariant violation if this occurs
-      page = <UnknownPage />;
-    }
+    <ExposureNotificationMain />;
   }
-
-  return (
-    <View style={styles.backgroundImage}>
-      {page}
-      <SettingsNavButton />
-    </View>
-  );
 };
