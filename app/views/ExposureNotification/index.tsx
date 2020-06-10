@@ -1,13 +1,24 @@
-import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import React, { useContext } from 'react';
+import { Text, View, StyleSheet } from 'react-native';
 
 import NotAvailable from './NotAvailable';
+import ExposureNotificationContext, {
+  ExposureNotificationState,
+} from '../../ExposureNotificationContext';
 
 const ExposureNotificationMain = (): JSX.Element => {
+  const { enabled } = useContext<ExposureNotificationState>(
+    ExposureNotificationContext,
+  );
   return (
     <View style={styles.container}>
-      <Text>ENMain</Text>
-      <NotAvailable />
+      {enabled ? (
+        <View>
+          <Text>Enabled</Text>
+        </View>
+      ) : (
+        <NotAvailable />
+      )}
     </View>
   );
 };

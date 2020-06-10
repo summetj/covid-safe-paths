@@ -17,7 +17,7 @@ import { Typography } from '../../components/Typography';
 import { Theme } from '../../constants/themes';
 import { MayoButton } from '../main/MayoButton';
 
-export const ExposureNotificationNotAvailablePage = (): JSX.Element => {
+const NotAvailable = (): JSX.Element => {
   const { t } = useTranslation();
   const size = Dimensions.get('window').height;
 
@@ -136,3 +136,5 @@ export const styles = StyleSheet.create({
     marginBottom: 24,
   },
 });
+
+export default NotAvailable;

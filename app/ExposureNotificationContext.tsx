@@ -5,14 +5,16 @@ import * as ExposureNotifications from './exposureNotificationsNativeModule';
 
 export type ENAuthorizationStatus = 'authorized' | 'notAuthorized';
 
-interface ExposureNotificationsState {
+interface ExposureNotificationState {
+  enabled: boolean;
   exposureNotificationAuthorizationStatus: ENAuthorizationStatus;
   requestExposureNotificationAuthorization: () => void;
 }
 
 const initialStatus: ENAuthorizationStatus = 'notAuthorized';
 
-const ExposureNotificationsContext = createContext<ExposureNotificationsState>({
+const ExposureNotificationsContext = createContext<ExposureNotificationState>({
+  enabled: false,
   exposureNotificationAuthorizationStatus: initialStatus,
   requestExposureNotificationAuthorization: () => {},
 });
@@ -39,6 +41,7 @@ const ExposureNotificationsProvider = ({
   return (
     <ExposureNotificationsContext.Provider
       value={{
+        enabled: true,
         exposureNotificationAuthorizationStatus,
         requestExposureNotificationAuthorization,
       }}>
@@ -47,5 +50,5 @@ const ExposureNotificationsProvider = ({
   );
 };
 
-export { ExposureNotificationsProvider };
+export { ExposureNotificationsProvider, ExposureNotificationState };
 export default ExposureNotificationsContext;

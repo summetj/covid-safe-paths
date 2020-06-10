@@ -108,6 +108,11 @@ export const Main = () => {
       </View>
     );
   } else {
-    <ExposureNotificationMain />;
+    return (
+      <View style={styles.backgroundImage}>
+        <SettingsNavButton />
+        <ExposureNotificationMain />
+      </View>
+    );
   }
 };
