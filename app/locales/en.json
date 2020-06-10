@@ -153,7 +153,7 @@
     "launch_notif_header": "Notifications will let you know if you cross paths with an infected person.",
     "launch_notif_subheader": "We won't bother you except to share updates on your potential exposure risks.",
     "launch_notification_access": "Allow notifications",
-    "launch_screen1_header": "The way back to normal starts here.",
+    "launch_screen1_header": "Welcome to Pathcheck",
     "launch_screen2_header_bluetooth": "Your phone remembers other devices it meets but won't identify you to other people.",
     "launch_screen2_header_location": "Get notified if you cross paths with someone later diagnosed for COVID-19.",
     "launch_screen2_subheader_bluetooth": "Nearby phones use Bluetooth to share and save random number strings to recall devices nearby.\n\nIf a person reports a positive diagnosis, their phone's recent random IDs are flagged to anonymously notify others. No locations or personal info is shared.",
@@ -196,9 +196,9 @@
     "terms_of_use": "Terms of use"
   },
   "onboarding": {
-    "eula_checkbox": "I accept the licensing agreement",
     "eula_continue": "Continue",
-    "eula_message": "*You must accept in order to use Safe Paths",
+    "eula_label": "By using PathCheck, you agree to the",
+    "eula_link": "Terms of Use",
     "notification_header": "Would you like to recieve notifications when you may have crossed paths with the virus?",
     "notification_subheader": "To recieve exposure notifications, you need to be in an area covered by a local Health Department partner.\n\nIf there are no local or regional partner Health Department in your area yet, get notified when new Health Departments are added near you.",
     "location_header": "To determine when you may have crossed paths with the virus, PathCheck needs location access.",

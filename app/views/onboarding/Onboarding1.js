@@ -15,12 +15,14 @@ import languages, {
   supportedDeviceLanguageOrEnglish,
 } from './../../locales/languages';
 import { Images } from '../../assets';
-import { NativePicker, Typography } from '../../components';
+import { Checkbox, NativePicker, Typography } from '../../components';
 import Colors from '../../constants/colors';
 import fontFamily from '../../constants/fonts';
 import { Theme } from '../../constants/themes';
 import { EulaModal } from '../EulaModal';
 import { sharedStyles } from './styles';
+
+import { Spacing } from '../../styles';
 
 const width = Dimensions.get('window').width;
 
@@ -95,6 +97,17 @@ class Onboarding extends Component {
                 </Typography>
               </View>
               <View style={sharedStyles.footerContainer}>
+                <View style={styles.eulaContainer}>
+                  <Checkbox />
+                  <View>
+                    <Typography>
+                      {languages.t('onboarding.eula_label')}
+                    </Typography>
+                    <Typography style={styles.hyperlink}>
+                      {languages.t('onboarding.eula_link')}
+                    </Typography>
+                  </View>
+                </View>
                 <EulaModal
                   continueFunction={() =>
                     this.props.navigation.replace('Onboarding2')
@@ -150,6 +163,11 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     textAlign: 'center',
     textTransform: 'uppercase',
+  },
+  eulaContainer: {
+    flex: 1,
+    flexDirection: 'row',
+    marginBottom: Spacing.small,
   },
 });
 

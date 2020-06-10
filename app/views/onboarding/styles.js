@@ -4,7 +4,7 @@ export const sharedStyles = StyleSheet.create({
   footerContainer: {
     position: 'absolute',
     bottom: 0,
-    padding: 24,
+    padding: 30,
     width: '100%',
   },
 });
