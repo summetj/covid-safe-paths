@@ -11,14 +11,15 @@ import {
 import { SvgXml } from 'react-native-svg';
 
 import { Icons, Images } from '../../assets';
-import { Button, Typography } from '../../components';
+import { Button } from '../../components/Button';
+import { Typography } from '../../components/Typography';
 import { Theme } from '../../constants/themes';
 import { useAssets } from '../../TracingStrategyAssets';
 import { MayoButton } from './MayoButton';
 import Colors from '../../constants/colors';
 import fontFamily from '../../constants/fonts';
 
-export const ExposurePage = () => {
+export const ExposurePage = (): JSX.Element => {
   const { t } = useTranslation();
   const { exposurePageSubheader } = useAssets();
   const navigation = useNavigation();

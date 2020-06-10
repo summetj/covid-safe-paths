@@ -141,8 +141,6 @@
 		C5AA24D824768FFF00BA0A99 /* COVIDSafePathsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* COVIDSafePathsTests.m */; };
 		C5C850C7248014F700A494CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C850C6248014F700A494CA /* main.m */; };
 		C5C850CA2480156200A494CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C850C92480156200A494CA /* AppDelegate.m */; };
-		C5CBDB3824903DA500B4EE51 /* BTE_Production.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = C5CBDB3724903DA500B4EE51 /* BTE_Production.entitlements */; };
-		C5CBDB3A24903E9F00B4EE51 /* BTE_Development.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = C5CBDB3924903E9F00B4EE51 /* BTE_Development.entitlements */; };
 		C5EF723724864F8500AA39D5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C5EF72202485D0E600AA39D5 /* main.m */; };
 		C5EF7246248654A900AA39D5 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		D43E27B6F1E045D798270A11 /* IBMPlexSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4904B061CC24439783E20928 /* IBMPlexSans-SemiBold.ttf */; };
@@ -352,8 +350,7 @@
 		C5C850F8248125A800A494CA /* libBackgroundGeolocation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libBackgroundGeolocation.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5C850FB24812AAB00A494CA /* GPS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GPS-Bridging-Header.h"; sourceTree = "<group>"; };
 		C5CAF9029B3AE69C411463F3 /* Pods-COVIDSafePathsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-COVIDSafePathsTests.debug.xcconfig"; path = "Target Support Files/Pods-COVIDSafePathsTests/Pods-COVIDSafePathsTests.debug.xcconfig"; sourceTree = "<group>"; };
-		C5CBDB3724903DA500B4EE51 /* BTE_Production.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BTE_Production.entitlements; sourceTree = "<group>"; };
-		C5CBDB3924903E9F00B4EE51 /* BTE_Development.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BTE_Development.entitlements; sourceTree = "<group>"; };
+		C5CBDB6924905BEC00B4EE51 /* COVIDSafePaths.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = COVIDSafePaths.entitlements; sourceTree = "<group>"; };
 		C5EF72202485D0E600AA39D5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = bridge/main.m; sourceTree = "<group>"; };
 		C6CBA4DBBF104AC1AB920555 /* IBMPlexSans-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "IBMPlexSans-BoldItalic.ttf"; path = "../shared/assets/fonts/IBMPlexSans-BoldItalic.ttf"; sourceTree = "<group>"; };
 		C840FB7884D64E6FA97ECC2C /* IBMPlexSans-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "IBMPlexSans-Medium.ttf"; path = "../app/assets/fonts/IBMPlexSans-Medium.ttf"; sourceTree = "<group>"; };
@@ -672,6 +669,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				C5CBDB6924905BEC00B4EE51 /* COVIDSafePaths.entitlements */,
 				08445F4924283AB5008754AC /* GoogleMaps.bundle */,
 				08445F4724283A46008754AC /* GoogleMapsCore.framework */,
 				08445F4524283A40008754AC /* GoogleMaps.framework */,
@@ -787,8 +785,6 @@
 				C57BDFB124883EF400CE62B1 /* bridge */,
 				C5C850C92480156200A494CA /* AppDelegate.m */,
 				C5C850C6248014F700A494CA /* main.m */,
-				C5CBDB3924903E9F00B4EE51 /* BTE_Development.entitlements */,
-				C5CBDB3724903DA500B4EE51 /* BTE_Production.entitlements */,
 				C53FD0C224719AD2006D3268 /* Info.plist */,
 				C5850A63247D5A41007A596B /* Images.xcassets */,
 				C56190A12485332E009A6756 /* BTE-Bridging-Header.h */,
@@ -1045,7 +1041,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C53FD09E24719AD1006D3268 /* LaunchScreen.xib in Resources */,
-				C5CBDB3824903DA500B4EE51 /* BTE_Production.entitlements in Resources */,
 				C53FD09F24719AD1006D3268 /* IBMPlexMono-Bold.ttf in Resources */,
 				C53FD0A024719AD1006D3268 /* IBMPlexMono-BoldItalic.ttf in Resources */,
 				C53FD0A124719AD1006D3268 /* IBMPlexMono-ExtraLight.ttf in Resources */,
@@ -1056,7 +1051,6 @@
 				C53FD0A524719AD1006D3268 /* IBMPlexMono-LightItalic.ttf in Resources */,
 				C53FD0A624719AD1006D3268 /* IBMPlexMono-Medium.ttf in Resources */,
 				C53FD0A724719AD1006D3268 /* IBMPlexMono-MediumItalic.ttf in Resources */,
-				C5CBDB3A24903E9F00B4EE51 /* BTE_Development.entitlements in Resources */,
 				C53FD0A824719AD1006D3268 /* IBMPlexMono-SemiBold.ttf in Resources */,
 				C53FD0A924719AD1006D3268 /* IBMPlexMono-SemiBoldItalic.ttf in Resources */,
 				C53FD0AA24719AD1006D3268 /* IBMPlexMono-Thin.ttf in Resources */,
@@ -2070,8 +2064,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = BTE/BTE_Production.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_ENTITLEMENTS = COVIDSafePaths.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
@@ -2086,7 +2080,7 @@
 				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = org.pathcheck.guam.bt;
 				PRODUCT_NAME = BTE;
-				PROVISIONING_PROFILE_SPECIFIER = "pathcheck-guam-bt-appstore";
+				PROVISIONING_PROFILE_SPECIFIER = "pathcheck-guam-bt-developer";
 				SWIFT_OBJC_BRIDGING_HEADER = "BTE/BTE-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -2100,8 +2094,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = BTE/BTE_Production.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_ENTITLEMENTS = COVIDSafePaths.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
@@ -2116,7 +2110,7 @@
 				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = org.pathcheck.guam.bt;
 				PRODUCT_NAME = BTE;
-				PROVISIONING_PROFILE_SPECIFIER = "pathcheck-guam-bt-appstore";
+				PROVISIONING_PROFILE_SPECIFIER = "pathcheck-guam-bt-developer";
 				SWIFT_OBJC_BRIDGING_HEADER = "BTE/BTE-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -2130,8 +2124,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = BTE/BTE_Production.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_ENTITLEMENTS = COVIDSafePaths.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
@@ -2146,7 +2140,7 @@
 				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = org.pathcheck.guam.bt;
 				PRODUCT_NAME = BTE;
-				PROVISIONING_PROFILE_SPECIFIER = "pathcheck-guam-bt-appstore";
+				PROVISIONING_PROFILE_SPECIFIER = "pathcheck-guam-bt-developer";
 				SWIFT_OBJC_BRIDGING_HEADER = "BTE/BTE-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -2159,8 +2153,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = BTE/BTE_Production.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_ENTITLEMENTS = COVIDSafePaths.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
@@ -2175,7 +2169,7 @@
 				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = org.pathcheck.guam.bt;
 				PRODUCT_NAME = BTE;
-				PROVISIONING_PROFILE_SPECIFIER = "pathcheck-guam-bt-appstore";
+				PROVISIONING_PROFILE_SPECIFIER = "pathcheck-guam-bt-developer";
 				SWIFT_OBJC_BRIDGING_HEADER = "BTE/BTE-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
