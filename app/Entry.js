@@ -117,35 +117,36 @@ const MainApp = () => (
   </Stack.Navigator>
 );
 
-const OnboardingStack = () => (
-  <Stack.Navigator screenOptions={SCREEN_OPTIONS}>
-    <Stack.Screen name='Onboarding1' component={Onboarding1} />
-    <Stack.Screen name='Onboarding2' component={Onboarding2} />
-    <Stack.Screen name='Onboarding3' component={Onboarding3} />
-    <Stack.Screen name='Onboarding4' component={Onboarding4} />
-    <Stack.Screen
-      name='OnboardingPermissions'
-      component={OnboardingPermissions}
-    />
-    <Stack.Screen
-      name='EnableExposureNotifications'
-      component={EnableExposureNotifications}
-    />
-  </Stack.Navigator>
-);
+// const OnboardingStack = () => (
+//   <Stack.Navigator screenOptions={SCREEN_OPTIONS}>
+//     <Stack.Screen name='Onboarding1' component={Onboarding1} />
+//     <Stack.Screen name='Onboarding2' component={Onboarding2} />
+//     <Stack.Screen name='Onboarding3' component={Onboarding3} />
+//     <Stack.Screen name='Onboarding4' component={Onboarding4} />
+//     <Stack.Screen
+//       name='OnboardingPermissions'
+//       component={OnboardingPermissions}
+//     />
+//     <Stack.Screen
+//       name='EnableExposureNotifications'
+//       component={EnableExposureNotifications}
+//     />
+//   </Stack.Navigator>
+// );
 
 export const Entry = () => {
-  const onboardingComplete = useSelector(isOnboardingCompleteSelector);
+  // const onboardingComplete = useSelector(isOnboardingCompleteSelector);
 
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={SCREEN_OPTIONS}>
-        {onboardingComplete ? (
-          <Stack.Screen name={'App'} component={MainApp} />
-        ) : (
-          <Stack.Screen name={'Onboarding'} component={OnboardingStack} />
-        )}
+        <Stack.Screen name={'App'} component={MainApp} />
       </Stack.Navigator>
     </NavigationContainer>
   );
 };
+
+// {onboardingComplete ? (
+// ) : (
+// <Stack.Screen name={'Onboarding'} component={OnboardingStack} />
+// )}

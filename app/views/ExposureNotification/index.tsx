@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 
 import NotAvailable from './NotAvailable';
 import { ExposurePage } from '../main/ExposurePage';
