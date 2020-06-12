@@ -29,10 +29,9 @@ import {
 import { ExposureHistoryScreen } from './views/ExposureHistory/ExposureHistory';
 import Assessment from './views/assessment';
 import NextSteps from './views/NextSteps';
-import {
+import ENDebugMenu, {
   EN_DEBUG_MENU_SCREEN_NAME,
   EN_LOCAL_DIAGNOSIS_KEYS_SCREEN_NAME,
-  ENDebugMenu,
 } from './views/Settings/ENDebugMenu';
 import { ENLocalDiagnosisKeyScreen } from './views/Settings/ENLocalDiagnosisKeyScreen';
 import { FeatureFlagsScreen } from './views/FeatureFlagToggles';
