@@ -1,7 +1,7 @@
 import { CardStyleInterpolators } from '@react-navigation/stack';
 import React, { useMemo, useRef } from 'react';
 import { Alert, TouchableOpacity } from 'react-native';
-import { createNativeStackNavigator } from 'react-native-screens/native-stack';
+import { createStackNavigator } from '@react-navigation/stack';
 
 import { SvgXml } from 'react-native-svg';
 import { Icons } from '../../assets';
@@ -60,7 +60,7 @@ import { Share } from './endScreens/Share';
 
 /** @type {{ [key: string]: Survey }} */
 
-const Stack = createNativeStackNavigator();
+const Stack = createStackNavigator();
 
 const Assessment = ({ navigation }) => {
   /** @type {React.MutableRefObject<SurveyAnswers>} */
